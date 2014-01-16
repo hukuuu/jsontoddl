@@ -2,6 +2,20 @@
 
 simple cli tool for translating json data to sql inserts
 
+It will convert this
+```
+{
+    "id": 1,
+    "name": "John Doe",
+    "age": 45
+}
+```
+to this
+
+```
+insert into [tablename] ( id, name, age ) values ( 1, 'John Doe', 45 )
+```
+
 ##instalation
 
 1. clone the repository
