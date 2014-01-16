@@ -1,8 +1,8 @@
 {
-  "name": "sysdate",
+  "name": "jsontosql",
   "version": "0.0.1",
   "bin": {
-    "sysdate": "sysdate.js"
+    "jsontosql": "index.js"
   },
   "dependencies": {
     "through": "~2.3.4",

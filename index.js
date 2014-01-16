@@ -1,3 +1,4 @@
+#!node
 var fs = require('fs'),
   JSONStream = require('JSONStream'),
   es = require('event-stream'),
@@ -5,7 +6,9 @@ var fs = require('fs'),
   validUrl = require('valid-url'),
   request = require('request'),
   argv = require('optimist')
-    .usage('Converts json array to sql insert statements.')
+    .usage('---------------------------------------------------------\n' +
+      'JSONTOSQL | Converts json array to sql insert statements.\n' +
+      '---------------------------------------------------------\n')
     .demand(['i', 'o', 't'])
     .describe('i', 'The .json file for conversion ( may be a url pointing to json service ).')
     .describe('o', 'The location to put the sql.')
@@ -15,10 +18,10 @@ var fs = require('fs'),
   input = argv.i,
   output = argv.o,
   tableName = argv.t,
-  ddlParser = require('./jsontoddl')(tableName)
+  ddlParser = require('./jsontosql')(tableName)
 
 
-var inputStream = validUrl.isUri(input) ? request(input) : fs.createReadStream(input),
+  var inputStream = validUrl.isUri(input) ? request(input) : fs.createReadStream(input),
   parser = JSONStream.parse('*'),
   logger = es.mapSync(function(data) {
     console.log('---')
@@ -31,8 +34,3 @@ var inputStream = validUrl.isUri(input) ? request(input) : fs.createReadStream(i
     .pipe(ddlParser)
   // .pipe(logger)
   .pipe(fs.createWriteStream(output))
-
-
-    ////////////
-    // #!node //
-    ////////////
