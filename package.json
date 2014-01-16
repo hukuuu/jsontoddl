@@ -7,6 +7,9 @@
   "dependencies": {
     "through": "~2.3.4",
     "event-stream": "~3.1.0",
-    "JSONStream": "~0.7.1"
+    "JSONStream": "~0.7.1",
+    "optimist": "~0.6.0",
+    "valid-url": "~1.0.9",
+    "request": "~2.33.0"
   }
 }
