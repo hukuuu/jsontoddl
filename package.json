@@ -1,7 +1,12 @@
 {
-  "name":"sysdate",
+  "name": "sysdate",
   "version": "0.0.1",
   "bin": {
     "sysdate": "sysdate.js"
+  },
+  "dependencies": {
+    "through": "~2.3.4",
+    "event-stream": "~3.1.0",
+    "JSONStream": "~0.7.1"
   }
 }
