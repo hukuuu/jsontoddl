@@ -13,4 +13,4 @@ simple cli tool for translating json data to sql inserts
 
 ```jsontosql -i http://www.json-generator.com/j/cagiEUCgLC?indent=0 -o result.sql -t Contacts```
 
-you can use [online json generator](http://www.json-generator.com/) generate data.
+you can use [online json generator](http://www.json-generator.com/) to generate data.
