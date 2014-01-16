@@ -1,0 +1,7 @@
+{
+  "name":"sysdate",
+  "version": "0.0.1",
+  "bin": {
+    "sysdate": "sysdate.js"
+  }
+}
