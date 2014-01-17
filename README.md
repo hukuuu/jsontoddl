@@ -19,7 +19,7 @@ insert into [tablename] ( id, name, age ) values ( 1, 'John Doe', 45 )
 ##instalation
 
 1. clone the repository
-2. npm link
+2. npm install && npm link
 
 ##usage
 
